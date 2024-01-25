@@ -40,8 +40,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
             Route::resource('/admin/user-management/permissions', PermissionManagementController::class);
         });
 
-    });
+        Route::get('/admin/item-management', [ItemManagementController::class, 'index'])->name('item-management');
 
-    Route::get('/item-management/items', [ItemManagementController::class, 'index'])->name('item-management.items');
+    });
 
 });
