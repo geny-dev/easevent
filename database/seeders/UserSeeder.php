@@ -21,21 +21,21 @@ class UserSeeder extends Seeder
      */
     public function run(Generator $faker)
     {
-        // $demoUser = User::create([
-        //     'name'              => $faker->name,
-        //     'email'             => 'demo@demo.com',
-        //     'password'          => Hash::make('demo'),
-        //     'email_verified_at' => now(),
-        // ]);
-        // $demoUser->assignRole('Admin');
+        $demoUser = User::create([
+            'name'              => $faker->name,
+            'email'             => 'demo@demo.com',
+            'password'          => Hash::make('demo'),
+            'email_verified_at' => now(),
+        ]);
+        $demoUser->assignRole('Admin');
 
-        // $demoUser2 = User::create([
-        //     'name'              => $faker->name,
-        //     'email'             => 'admin@demo.com',
-        //     'password'          => Hash::make('demo'),
-        //     'email_verified_at' => now(),
-        // ]);
-        // $demoUser2->assignRole('Sub Admin');
-        UserFactory::new()->count(10)->create();
+        $demoUser2 = User::create([
+            'name'              => $faker->name,
+            'email'             => 'admin@demo.com',
+            'password'          => Hash::make('demo'),
+            'email_verified_at' => now(),
+        ]);
+        $demoUser2->assignRole('Sub Admin');
+        // UserFactory::new()->count(10)->create();
     }
 }

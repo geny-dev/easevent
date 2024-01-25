@@ -4,6 +4,7 @@ namespace App\Http\Controllers\admin;
 
 use App\DataTables\UsersDataTable;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -21,17 +22,14 @@ class UserManagementController extends Controller
      * Show the form for creating a new resource.
      */
     public function create(Request $request)
-    {
-        // User::create([
-        //     'name' => $request->username,
-        //     'email' => $request->email,
-        //     'password' => $request->password,
-        // ]);
-        User::create([
-            'name' => '11',
-            'email' => 'e@gamil.com',
-            'password' => 'adfasdf',
+    {        
+        $user = User::create([
+            'name' => $request->user_name,
+            'email' => $request->user_email,
+            'password' => 'ggg',
         ]);
+        return view('admin.pages.user-management.users.list', compact('user'));
+
     }
     /**
      * Store a newly created resource in storage.
@@ -70,16 +68,15 @@ class UserManagementController extends Controller
      */
     public function destroy(User $user)
     {
-        $auth = Auth::user();
-
-        // Check if the authenticated user is an admin
-        if ($auth->type !== 'admin') {
-            return response()->json([
-                'status_code' => 401,
-                'type' => 'error',
-                'message' => 'You are not authorized to perform this action.',
-            ], 401);
-        }
+        // $auth = Auth::user();
+        // // Check if the authenticated user is an admin
+        // if ($auth->type !== 'admin') {
+        //     return response()->json([
+        //         'status_code' => 401,
+        //         'type' => 'error',
+        //         'message' => 'You are not authorized to perform this action.',
+        //     ], 401);
+        // }
 
         // Check if the user exists
         if (!$user) {
@@ -93,10 +90,6 @@ class UserManagementController extends Controller
         // Delete the user
         $user->delete();
 
-        return response()->json([
-            'status_code' => 200,
-            'type' => 'success',
-            'message' => 'Great! Record deleted successfully.',
-        ], 200);
+        return view('admin.pages.user-management.users.list', compact('user'));
     }
 }
