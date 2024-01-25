@@ -3,6 +3,7 @@
 use App\Http\Controllers\admin\PermissionManagementController;
 use App\Http\Controllers\admin\RoleManagementController;
 use App\Http\Controllers\admin\UserManagementController;
+use App\Http\Controllers\admin\SurroundingManagementController;
 use App\Http\Controllers\admin\ItemManagementController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Auth;
@@ -38,6 +39,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
             Route::delete('/admin/user-management/users/destroy', [UserManagementController::class, 'destroy']);
             Route::resource('/admin/user-management/roles', RoleManagementController::class);
             Route::resource('/admin/user-management/permissions', PermissionManagementController::class);
+            Route::resource('/admin/user-management/surrounding', SurroundingManagementController::class);
         });
 
         Route::get('/admin/item-management', [ItemManagementController::class, 'index'])->name('item-management');
