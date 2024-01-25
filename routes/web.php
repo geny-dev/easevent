@@ -33,6 +33,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
         Route::name('user-management.')->group(function () {
             Route::resource('/admin/user-management/users', UserManagementController::class);
+            Route::post('/admin/user-management/users/create', [UserManagementController::class, 'create']);
+            Route::delete('/admin/user-management/users/destroy', [UserManagementController::class, 'destroy']);
             Route::resource('/admin/user-management/roles', RoleManagementController::class);
             Route::resource('/admin/user-management/permissions', PermissionManagementController::class);
         });
