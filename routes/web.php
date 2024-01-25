@@ -26,14 +26,17 @@ Auth::routes();
 
 Route::middleware(['auth', 'verified'])->group(function () {
 
-    Route::get('/', [HomeController::class, 'index']);
+    Route::name('admin.')->group(function () {
+        Route::get('/admin', [HomeController::class, 'index']);
 
-    Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard');
+        Route::get('/admin/dashboard', [HomeController::class, 'index'])->name('dashboard');
 
-    Route::name('user-management.')->group(function () {
-        Route::resource('/user-management/users', UserManagementController::class);
-        Route::resource('/user-management/roles', RoleManagementController::class);
-        Route::resource('/user-management/permissions', PermissionManagementController::class);
+        Route::name('user-management.')->group(function () {
+            Route::resource('/admin/user-management/users', UserManagementController::class);
+            Route::resource('/admin/user-management/roles', RoleManagementController::class);
+            Route::resource('/admin/user-management/permissions', PermissionManagementController::class);
+        });
+
     });
 
 });

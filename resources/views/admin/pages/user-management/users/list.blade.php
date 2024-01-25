@@ -295,7 +295,7 @@
                 processing: true,
                 serverSide: true,
                 responsive: true,
-                ajax: "{{ route('user-management.users.index') }}",
+                ajax: "{{ route('admin.user-management.users.index') }}",
                 columns: [
                     {
                         data: 'user',
