@@ -1,11 +1,11 @@
-@extends('layouts.master')
+@extends('admin.layouts.master')
 @section('content')
 
     @section('title')
         Items
     @endsection
 
- 
+
 <!--begin::Container-->
 <div id="kt_content_container" class="container-xxl">
     <!--begin::Card-->
@@ -64,7 +64,7 @@
                 <!--end::Table head-->
                 <!--begin::Table body-->
                 <tbody class="fw-bold text-gray-600">
-                    
+
                 </tbody>
                 <!--end::Table body-->
             </table>

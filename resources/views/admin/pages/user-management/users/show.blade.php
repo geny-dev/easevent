@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('admin.layouts.master')
 @section('content')
 <!--begin::Container-->
 <div id="kt_content_container" class="container-xxl">

@@ -1,11 +1,11 @@
-@extends('layouts.master')
+@extends('admin.layouts.master')
 @section('content')
 
     @section('title')
         Surroundings
     @endsection
 
- 
+
 <!--begin::Container-->
 <div id="kt_content_container" class="container-xxl">
     <!--begin::Card-->
