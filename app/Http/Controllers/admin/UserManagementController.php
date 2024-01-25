@@ -20,11 +20,19 @@ class UserManagementController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        // User::create([
+        //     'name' => $request->username,
+        //     'email' => $request->email,
+        //     'password' => $request->password,
+        // ]);
+        User::create([
+            'name' => '11',
+            'email' => 'e@gamil.com',
+            'password' => 'adfasdf',
+        ]);
     }
-
     /**
      * Store a newly created resource in storage.
      */
@@ -62,6 +70,33 @@ class UserManagementController extends Controller
      */
     public function destroy(User $user)
     {
-        //
+        $auth = Auth::user();
+
+        // Check if the authenticated user is an admin
+        if ($auth->type !== 'admin') {
+            return response()->json([
+                'status_code' => 401,
+                'type' => 'error',
+                'message' => 'You are not authorized to perform this action.',
+            ], 401);
+        }
+
+        // Check if the user exists
+        if (!$user) {
+            return response()->json([
+                'status_code' => 404,
+                'type' => 'error',
+                'message' => 'Sorry! Record not found.',
+            ], 404);
+        }
+
+        // Delete the user
+        $user->delete();
+
+        return response()->json([
+            'status_code' => 200,
+            'type' => 'success',
+            'message' => 'Great! Record deleted successfully.',
+        ], 200);
     }
 }

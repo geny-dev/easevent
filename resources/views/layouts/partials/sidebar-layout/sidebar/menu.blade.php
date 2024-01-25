@@ -23,7 +23,7 @@
                 </span>
                 <div class="menu-sub menu-sub-accordion menu-active-bg">
                     <div class="menu-item">
-                        <a class="menu-link {{ request()->routeIs('dashboard') ? 'active' : '' }}"  href="{{ route('dashboard') }}">
+                        <a class="menu-link {{ request()->routeIs('admin.dashboard') ? 'active' : '' }}"  href="{{ route('admin.dashboard') }}">
                             <span class="menu-bullet">
                                 <span class="bullet bullet-dot"></span>
                             </span>
@@ -33,7 +33,7 @@
                 </div>
             </div>
 
-            <div data-kt-menu-trigger="click" class="menu-item menu-accordion mb-1 {{ request()->routeIs('user-management.users.*') ? 'hover show' : '' }}">
+            <div data-kt-menu-trigger="click" class="menu-item menu-accordion mb-1 {{ request()->routeIs('admin.user-management.users.*') ? 'hover show' : '' }}">
                 <span class="menu-link">
                     <span class="menu-icon">
                         <!--begin::Svg Icon | path: icons/duotune/general/gen051.svg-->
@@ -49,7 +49,7 @@
                     <span class="menu-arrow"></span>
                 </span>
                 <div class="menu-sub menu-sub-accordion">
-                    <div data-kt-menu-trigger="click" class="menu-item menu-accordion mb-1 {{ request()->routeIs('user-management.users.*') ? 'hover show' : '' }}">
+                    <div data-kt-menu-trigger="click" class="menu-item menu-accordion mb-1 {{ request()->routeIs('admin.user-management.users.*') ? 'hover show' : '' }}">
                         <span class="menu-link">
                             <span class="menu-bullet">
                                 <span class="bullet bullet-dot"></span>
@@ -59,7 +59,7 @@
                         </span>
                         <div class="menu-sub menu-sub-accordion">
                             <div class="menu-item">
-                                <a class="menu-link {{ request()->routeIs('user-management.users.index') ? 'active' : '' }}" href="{{ route('user-management.users.index') }}">
+                                <a class="menu-link {{ request()->routeIs('admin.user-management.users.index') ? 'active' : '' }}" href="{{ route('admin.user-management.users.index') }}">
                                     <span class="menu-bullet">
                                         <span class="bullet bullet-dot"></span>
                                     </span>
@@ -67,7 +67,7 @@
                                 </a>
                             </div>
                             <!-- <div class="menu-item">
-                                <a class="menu-link {{ request()->routeIs('user-management.users.create') ? 'active' : '' }}" href="{{ route('user-management.users.create') }}">
+                                <a class="menu-link {{ request()->routeIs('admin.user-management.users.create') ? 'active' : '' }}" href="{{ route('admin.user-management.users.create') }}">
                                     <span class="menu-bullet">
                                         <span class="bullet bullet-dot"></span>
                                     </span>
@@ -76,7 +76,7 @@
                             </div> -->
                         </div>
                     </div>
-                    <div data-kt-menu-trigger="click" class="menu-item menu-accordion {{ request()->routeIs('user-management.roles.*') ? 'hover show' : '' }}">
+                    <div data-kt-menu-trigger="click" class="menu-item menu-accordion {{ request()->routeIs('admin.user-management.roles.*') ? 'hover show' : '' }}">
                         <span class="menu-link">
                             <span class="menu-bullet">
                                 <span class="bullet bullet-dot"></span>
@@ -86,7 +86,7 @@
                         </span>
                         <div class="menu-sub menu-sub-accordion">
                             <div class="menu-item">
-                                <a class="menu-link {{ request()->routeIs('user-management.roles.*') ? 'active' : '' }}" href="{{ route('user-management.roles.index') }}">
+                                <a class="menu-link {{ request()->routeIs('admin.user-management.roles.*') ? 'active' : '' }}" href="{{ route('admin.user-management.roles.index') }}">
                                     <span class="menu-bullet">
                                         <span class="bullet bullet-dot"></span>
                                     </span>
@@ -94,7 +94,7 @@
                                 </a>
                             </div>
                             <!-- <div class="menu-item">
-                                <a class="menu-link" href="../../demo8/dist/apps/user-management/roles/view.html">
+                                <a class="menu-link" href="../../demo8/dist/apps/admin.user-management/roles/view.html">
                                     <span class="menu-bullet">
                                         <span class="bullet bullet-dot"></span>
                                     </span>
@@ -104,7 +104,7 @@
                         </div>
                     </div>
                     <div class="menu-item">
-                        <a class="menu-link {{ request()->routeIs('user-management.permissions.*') ? 'active' : '' }}" href="{{ route('user-management.permissions.index') }}">
+                        <a class="menu-link {{ request()->routeIs('admin.user-management.permissions.*') ? 'active' : '' }}" href="{{ route('admin.user-management.permissions.index') }}">
                             <span class="menu-bullet">
                                 <span class="bullet bullet-dot"></span>
                             </span>
