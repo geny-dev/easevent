@@ -119,6 +119,14 @@
                             <span class="menu-title">Surrounding</span>
                         </a>
                     </div>
+                    <div class="menu-item">
+                        <a class="menu-link {{ request()->routeIs('admin.user-management.audience.*') ? 'active' : '' }}" href="{{ route('admin.user-management.audience.index') }}">
+                            <span class="menu-bullet">
+                                <span class="bullet bullet-dot"></span>
+                            </span>
+                            <span class="menu-title">Audience</span>
+                        </a>
+                    </div>
                 </div>
             </div>
 
