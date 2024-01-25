@@ -270,7 +270,7 @@
 						<!--end::Aside user-->
 					</div>
 					<!--end::Aside Toolbarl-->
-                    @include('layouts.partials.sidebar-layout.sidebar.menu')
+                    @include('admin.layouts.partials.sidebar-layout.sidebar.menu')
 				</div>
 				<!--end::Aside-->
 				<!--begin::Wrapper-->
@@ -327,7 +327,7 @@
 							<!--begin::Toolbar container-->
 							<div class="container-fluid py-6 py-lg-0 d-flex flex-column flex-lg-row align-items-lg-stretch justify-content-lg-between">
 								<!--begin::Page title-->
-                                @include('layouts.partials.header-layout.header.page-title')
+                                @include('admin.layouts.partials.header-layout.header.page-title')
 								<!--end::Page title-->
 
 							</div>

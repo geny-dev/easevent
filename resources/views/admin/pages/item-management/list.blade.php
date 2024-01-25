@@ -1,11 +1,11 @@
-@extends('layouts.master')
+@extends('admin.layouts.master')
 @section('content')
 
     @section('title')
         Items
     @endsection
 
- 
+
 <!--begin::Container-->
 <div id="kt_content_container" class="container-xxl">
     <!--begin::Card-->
@@ -233,7 +233,7 @@
                         </td>
                         <!--end::Action=-->
                     </tr>
-                    
+
                 </tbody>
                 <!--end::Table body-->
             </table>

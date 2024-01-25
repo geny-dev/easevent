@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('admin.layouts.master')
 @section('content')
     <!--begin::Container-->
     <div id="kt_content_container" class="container-xxl">
@@ -274,7 +274,7 @@
                     <!--end::Table row-->
                 </thead>
                 <tbody class="text-gray-600 fw-bold">
-                    
+
                 </tbody>
                 </table>
                 <!--end::Table-->
