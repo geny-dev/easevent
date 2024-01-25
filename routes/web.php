@@ -3,6 +3,7 @@
 use App\Http\Controllers\admin\PermissionManagementController;
 use App\Http\Controllers\admin\RoleManagementController;
 use App\Http\Controllers\admin\UserManagementController;
+use App\Http\Controllers\admin\ItemManagementController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -35,5 +36,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
         Route::resource('/user-management/roles', RoleManagementController::class);
         Route::resource('/user-management/permissions', PermissionManagementController::class);
     });
+
+    Route::get('/item-management/items', [ItemManagementController::class, 'index'])->name('item-management.items');
 
 });
