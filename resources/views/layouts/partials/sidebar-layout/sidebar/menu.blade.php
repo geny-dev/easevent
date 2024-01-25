@@ -111,6 +111,14 @@
                             <span class="menu-title">Permissions</span>
                         </a>
                     </div>
+                    <div class="menu-item">
+                        <a class="menu-link {{ request()->routeIs('user-management.surrounding.*') ? 'active' : '' }}" href="{{ route('user-management.surrounding.index') }}">
+                            <span class="menu-bullet">
+                                <span class="bullet bullet-dot"></span>
+                            </span>
+                            <span class="menu-title">Surrounding</span>
+                        </a>
+                    </div>
                 </div>
             </div>
 
