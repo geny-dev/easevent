@@ -112,7 +112,7 @@
                         </a>
                     </div>
                     <div class="menu-item">
-                        <a class="menu-link {{ request()->routeIs('user-management.surrounding.*') ? 'active' : '' }}" href="{{ route('user-management.surrounding.index') }}">
+                        <a class="menu-link {{ request()->routeIs('admin.user-management.surrounding.*') ? 'active' : '' }}" href="{{ route('admin.user-management.surrounding.index') }}">
                             <span class="menu-bullet">
                                 <span class="bullet bullet-dot"></span>
                             </span>
