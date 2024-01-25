@@ -32,7 +32,7 @@
 
 
 <div class="menu-item px-3">
-    <a href="{{ route('user-management.users.show', $user) }}" class="menu-link px-3">
+    <a href="{{ route('admin.user-management.users.show', $user) }}" class="menu-link px-3">
         View
     </a>
 </div>
@@ -48,7 +48,7 @@
 
 <!--begin::Menu item-->
 <div class="menu-item px-3">
-    <a href="{{ route('user-management.users.destroy', $user) }}" class="menu-link px-3" data-kt-action="delete_row">
+    <a href="{{ route('admin.user-management.users.destroy', $user) }}" class="menu-link px-3" data-kt-action="delete_row">
         Delete
     </a>
 </div>
