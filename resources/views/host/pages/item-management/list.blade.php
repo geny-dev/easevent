@@ -57,7 +57,7 @@
                     <tr class="text-start text-gray-400 fw-bolder fs-7 text-uppercase gs-0">
                         <th class="min-w-125px">Name</th>
                         <th class="min-w-250px">Type</th>
-                        <th class="min-w-125px">Price</th>
+                        <th class="min-w-125px">Address</th>
                         <th class="text-end min-w-100px">Actions</th>
                     </tr>
                     <!--end::Table row-->

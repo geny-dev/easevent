@@ -4,7 +4,7 @@ use App\Http\Controllers\admin\PermissionManagementController;
 use App\Http\Controllers\admin\RoleManagementController;
 use App\Http\Controllers\admin\UserManagementController;
 use App\Http\Controllers\admin\SurroundingManagementController;
-use App\Http\Controllers\admin\ItemManagementController;
+use App\Http\Controllers\host\ItemManagementController;
 use App\Http\Controllers\admin\AudienceManagementController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Auth;
@@ -44,7 +44,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
             Route::resource('/admin/user-management/audience', AudienceManagementController::class);
         });
 
-        Route::get('/admin/item-management', [ItemManagementController::class, 'index'])->name('item-management');
+        Route::get('/host/item-management', [ItemManagementController::class, 'index'])->name('item-management');
 
     });
 

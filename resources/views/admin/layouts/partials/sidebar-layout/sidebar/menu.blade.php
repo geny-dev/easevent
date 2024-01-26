@@ -128,7 +128,7 @@
                         </span>
                         <!--end::Svg Icon-->
                     </span>
-                    <span class="menu-title">Item Management</span>
+                    <span class="menu-title">Host</span>
                     <span class="menu-arrow"></span>
                 </span>
                 <div class="menu-sub menu-sub-accordion menu-active-bg">
@@ -137,7 +137,7 @@
                             <span class="menu-bullet">
                                 <span class="bullet bullet-dot"></span>
                             </span>
-                            <span class="menu-title">Item List</span>
+                            <span class="menu-title">Item</span>
                         </a>
                     </div>
                 </div>

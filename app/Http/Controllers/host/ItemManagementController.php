@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\admin;
+namespace App\Http\Controllers\host;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -11,7 +11,7 @@ class ItemManagementController extends Controller
 {
     public function index(UsersDataTable $dataTable)
     {
-        return $dataTable->render('admin.pages.item-management.list');
+        return $dataTable->render('host.pages.item-management.list');
     }
     //
 }
