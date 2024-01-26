@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\admin\PermissionManagementController;
+use App\Http\Controllers\admin\PoolManagementController;
 use App\Http\Controllers\admin\RoleManagementController;
 use App\Http\Controllers\admin\UserManagementController;
 use App\Http\Controllers\admin\SurroundingManagementController;
@@ -45,6 +46,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
             Route::post('/admin/user-management/users/create', [UserManagementController::class, 'create']);
             Route::resource('/admin/user-management/roles', RoleManagementController::class);
             Route::resource('/admin/user-management/permissions', PermissionManagementController::class);
+            Route::resource('/admin/user-management/pools', PoolManagementController::class);
             Route::resource('/admin/user-management/surrounding', SurroundingManagementController::class);
             Route::resource('/admin/user-management/audience', AudienceManagementController::class);
         });

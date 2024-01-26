@@ -104,6 +104,14 @@
                         </a>
                     </div>
                     <div class="menu-item">
+                        <a class="menu-link {{ request()->routeIs('admin.user-management.pools.*') ? 'active' : '' }}" href="{{ route('admin.user-management.pools.index') }}">
+                            <span class="menu-bullet">
+                                <span class="bullet bullet-dot"></span>
+                            </span>
+                            <span class="menu-title">Pool</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
                         <a class="menu-link {{ request()->routeIs('admin.user-management.audience.*') ? 'active' : '' }}" href="{{ route('admin.user-management.audience.index') }}">
                             <span class="menu-bullet">
                                 <span class="bullet bullet-dot"></span>
