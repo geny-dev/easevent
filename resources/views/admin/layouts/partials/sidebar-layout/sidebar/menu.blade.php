@@ -104,6 +104,14 @@
                         </a>
                     </div>
                     <div class="menu-item">
+                        <a class="menu-link {{ request()->routeIs('admin.user-management.pools.*') ? 'active' : '' }}" href="{{ route('admin.user-management.pools.index') }}">
+                            <span class="menu-bullet">
+                                <span class="bullet bullet-dot"></span>
+                            </span>
+                            <span class="menu-title">Pool</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
                         <a class="menu-link {{ request()->routeIs('admin.user-management.audience.*') ? 'active' : '' }}" href="{{ route('admin.user-management.audience.index') }}">
                             <span class="menu-bullet">
                                 <span class="bullet bullet-dot"></span>
@@ -138,6 +146,36 @@
                                 <span class="bullet bullet-dot"></span>
                             </span>
                             <span class="menu-title">Item List</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div data-kt-menu-trigger="click" class="menu-item here show menu-accordion">
+                <span class="menu-link">
+                    <span class="menu-icon">
+                        <!--begin::Svg Icon | path: icons/duotune/general/gen025.svg-->
+                        <span class="svg-icon svg-icon-2">
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 494.173 494.173" xml:space="preserve" width="800px" height="800px" fill="#4a4b68" stroke="#4a4b68" stroke-width="9.389287">
+                            <path style="fill:#FFF;" d="M0,15.506v463.161h494.173V15.506H0z M460.643,445.72H33.509V60.714h427.129 C460.643,60.714,460.643,445.72,460.643,445.72z"/> 
+                            <rect x="305.282" y="343.827" style="fill:#FFF;" width="118.46" height="53.558"/> 
+                            <rect x="305.282" y="263.748" style="fill:#FFF;" width="118.46" height="53.584"/> 
+                            <rect x="305.282" y="103.563" style="fill:#FFF;" width="118.46" height="53.584"/> 
+                            <rect x="305.282" y="183.669" style="fill:#FFF;" width="118.46" height="53.605"/> 
+                            <polygon style="fill:#FFF;" points="196.895,345.735 295.539,247.086 196.895,148.395 196.895,208.849 60.147,208.849 60.147,285.328 196.895,285.328 "/> 
+                        </svg>
+                        </span>
+                        <!--end::Svg Icon-->
+                    </span>
+                    <span class="menu-title">Environment</span>
+                    <span class="menu-arrow"></span>
+                </span>
+                <div class="menu-sub menu-sub-accordion menu-active-bg">
+                    <div class="menu-item">
+                        <a class="menu-link {{ request()->routeIs('admin.env-management.event.index') ? 'active' : '' }}"  href="{{ route('admin.env-management.event.index') }}">
+                            <span class="menu-bullet">
+                                <span class="bullet bullet-dot"></span>
+                            </span>
+                            <span class="menu-title">Event</span>
                         </a>
                     </div>
                 </div>
