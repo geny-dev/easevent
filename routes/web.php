@@ -4,6 +4,7 @@ use App\Http\Controllers\admin\PermissionManagementController;
 use App\Http\Controllers\admin\RoleManagementController;
 use App\Http\Controllers\admin\UserManagementController;
 use App\Http\Controllers\admin\SurroundingManagementController;
+use App\Http\Controllers\admin\EventManagementController;
 use App\Http\Controllers\admin\ItemManagementController;
 use App\Http\Controllers\admin\AudienceManagementController;
 use App\Http\Controllers\HomeController;
@@ -33,6 +34,11 @@ Route::middleware(['auth', 'verified'])->group(function () {
         Route::get('/admin', [HomeController::class, 'index']);
 
         Route::get('/admin/dashboard', [HomeController::class, 'index'])->name('dashboard');
+
+        Route::name('env-management.')->group(function () {
+            Route::resource('/admin/env-management/event', EventManagementController::class);
+            Route::post('/admin/env-management/event/create', [EventManagementController::class, 'create']);
+        });
 
         Route::name('user-management.')->group(function () {
             Route::resource('/admin/user-management/users', UserManagementController::class);
