@@ -28,7 +28,7 @@ class UserManagementController extends Controller
             'email' => $request->user_email,
             'password' => 'ggg',
         ]);
-        return view('admin.pages.user-management.users.list', compact('user'));
+        return redirect()->route('admin.user-management.users.index');
 
     }
     /**
@@ -52,7 +52,7 @@ class UserManagementController extends Controller
      */
     public function edit(User $user)
     {
-        //
+        return view('admin.pages.user-management.users.edit', compact('user'));
     }
 
     /**
@@ -60,7 +60,13 @@ class UserManagementController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        //
+        $user = User::findOrFail($user->id);
+
+        // Update the user's information
+        $user->name = $request->user_name;
+        $user->email = $request->user_email;
+        $user->save();
+        return redirect()->route('admin.user-management.users.index');
     }
 
     /**
@@ -89,7 +95,8 @@ class UserManagementController extends Controller
 
         // Delete the user
         $user->delete();
-
-        return view('admin.pages.user-management.users.list', compact('user'));
+        
+        // return redirect()->route('admin/user-management/users');
+        return redirect()->route('admin.user-management.users.index');
     }
 }
