@@ -8,7 +8,7 @@
 
     <!--begin::Menu item-->
     <div>
-        <a href="#" class="btn btn-light btn-active-light-primary btn-flex btn-center btn-sm px-3" data-kt-user-id="{{ $user->id }}" data-bs-toggle="modal" data-bs-target="#kt_modal_add_user" data-kt-action="update_row">
+        <a href="{{ route('admin.user-management.users.edit', $user) }}" class="btn btn-light btn-active-light-primary btn-flex btn-center btn-sm px-3">
             Edit
         </a>
     </div>
