@@ -1,4 +1,4 @@
-@extends('admin.layouts.auth')
+@extends('layouts.auth')
 @section('content')
     <!--begin::Form-->
     @if (session('status'))

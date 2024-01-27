@@ -1,4 +1,4 @@
-@extends('admin.layouts.auth')
+@extends('admin/layouts.auth')
 @section('content')
     <!--begin::Form-->
     <form class="form w-100" novalidate="novalidate" method="POST" action="{{ route('login') }}">
