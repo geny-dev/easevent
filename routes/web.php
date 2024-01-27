@@ -43,12 +43,13 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
         Route::name('user-management.')->group(function () {
             Route::resource('/admin/user-management/users', UserManagementController::class);
-            Route::post('/admin/user-management/users/create', [UserManagementController::class, 'create']);
+            // Route::post('/admin/user-management/users/create', [UserManagementController::class, 'create']);
             Route::resource('/admin/user-management/roles', RoleManagementController::class);
             Route::resource('/admin/user-management/permissions', PermissionManagementController::class);
             Route::resource('/admin/user-management/pools', PoolManagementController::class);
             Route::resource('/admin/user-management/surrounding', SurroundingManagementController::class);
             Route::resource('/admin/user-management/audience', AudienceManagementController::class);
+            
         });
 
         Route::get('/admin/item-management', [ItemManagementController::class, 'index'])->name('item-management');
