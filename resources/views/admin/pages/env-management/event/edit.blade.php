@@ -41,7 +41,7 @@
                         <!--end::Scroll-->
                         <!--begin::Actions-->
                         <div class="text-center pt-15">
-                            <a href="{{route('admin.env-management.event.index')}}" type="reset" class="btn btn-light me-3" >Discard</a>
+                            <a type="reset" class="btn btn-light me-3" href="{{route('admin.env-management.event.index')}}">Discard</a>
                             <button type="submit" class="btn btn-primary" data-kt-users-modal-action="submit">
                                 <span class="indicator-label">Update</span>
                                 <span class="indicator-progress">Please wait...

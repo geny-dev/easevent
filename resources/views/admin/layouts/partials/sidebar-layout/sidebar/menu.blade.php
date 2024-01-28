@@ -21,7 +21,7 @@
                     <span class="menu-title">Dashboards</span>
                     <span class="menu-arrow"></span>
                 </span>
-                <div class="menu-sub menu-sub-accordion">
+                <div class="menu-sub menu-sub-accordion menu-active-bg">
                     <div class="menu-item">
                         <a class="menu-link {{ request()->routeIs('admin.dashboard') ? 'active' : '' }}"  href="{{ route('admin.dashboard') }}">
                             <span class="menu-bullet">
@@ -104,6 +104,14 @@
                         </a>
                     </div>
                     <div class="menu-item">
+                        <a class="menu-link {{ request()->routeIs('admin.user-management.pools.*') ? 'active' : '' }}" href="{{ route('admin.user-management.pools.index') }}">
+                            <span class="menu-bullet">
+                                <span class="bullet bullet-dot"></span>
+                            </span>
+                            <span class="menu-title">Pool</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
                         <a class="menu-link {{ request()->routeIs('admin.user-management.audience.*') ? 'active' : '' }}" href="{{ route('admin.user-management.audience.index') }}">
                             <span class="menu-bullet">
                                 <span class="bullet bullet-dot"></span>
@@ -131,7 +139,7 @@
                     <span class="menu-title">Item Management</span>
                     <span class="menu-arrow"></span>
                 </span>
-                <div class="menu-sub menu-sub-accordion">
+                <div class="menu-sub menu-sub-accordion menu-active-bg">
                     <div class="menu-item">
                         <a class="menu-link {{ request()->routeIs('admin.item-management') ? 'active' : '' }}"  href="{{ route('admin.item-management') }}">
                             <span class="menu-bullet">
@@ -161,21 +169,13 @@
                     <span class="menu-title">Environment</span>
                     <span class="menu-arrow"></span>
                 </span>
-                <div class="menu-sub menu-sub-accordion">
+                <div class="menu-sub menu-sub-accordion menu-active-bg">
                     <div class="menu-item">
                         <a class="menu-link {{ request()->routeIs('admin.env-management.event.index') ? 'active' : '' }}"  href="{{ route('admin.env-management.event.index') }}">
                             <span class="menu-bullet">
                                 <span class="bullet bullet-dot"></span>
                             </span>
-                            <span class="menu-title">Event Type</span>
-                        </a>
-                    </div>
-                    <div class="menu-item">
-                        <a class="menu-link {{ request()->routeIs('admin.env-management.surrounding.index') ? 'active' : '' }}"  href="{{ route('admin.env-management.surrounding.index') }}">
-                            <span class="menu-bullet">
-                                <span class="bullet bullet-dot"></span>
-                            </span>
-                            <span class="menu-title">Surrounding Type</span>
+                            <span class="menu-title">Event</span>
                         </a>
                     </div>
                 </div>
