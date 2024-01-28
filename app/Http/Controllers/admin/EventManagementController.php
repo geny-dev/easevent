@@ -19,7 +19,7 @@ class EventManagementController extends Controller
         $event = Event::create([
             'name' => $request->event_name,
         ]);
-        return redirect()->route('admin.env-management.event.index');
+        return view('admin.pages.env-management.event.list', compact('event'));
     }
 
     public function show(Event $event)
@@ -40,6 +40,20 @@ class EventManagementController extends Controller
         // Delete the user
         $event->delete();
 
+        return view('admin.pages.env-management.event.list', compact('event'));
+    }
+
+    public function edit(Event $event) {
+        return view('admin.pages.env-management.event.edit', compact('event'));
+    }
+
+    public function update(Request $request, Event $event)
+    {
+        $user = Event::findOrFail($event->id);
+
+        // Update the user's information
+        $user->name = $request->event_name;
+        $user->save();
         return redirect()->route('admin.env-management.event.index');
     }
 }
