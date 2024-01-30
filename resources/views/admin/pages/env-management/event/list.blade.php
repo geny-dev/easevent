@@ -256,7 +256,7 @@
                     },
                 ],
                 columnDefs: [
-                    { className: "d-flex align-items-center", "targets": [ 0 ] },
+                    { className: "d-flex align-items-center id-td", "targets": [ 0 ] },
                     { className: "text-end", "targets": [ 2 ] }
                 ]
             });
