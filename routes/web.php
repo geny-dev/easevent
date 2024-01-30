@@ -40,15 +40,12 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
         Route::name('env-management.')->group(function () {
             Route::resource('/admin/env-management/event', EventManagementController::class);
-            Route::post('/admin/env-management/event/create', [EventManagementController::class, 'create']);
             Route::resource('/admin/env_management/envsurrounding', EnvsurroundingManagementController::class);
-            Route::post('/admin/env-management/envsurrounding/create', [EnvsurroundingManagementController::class, 'create']);
             Route::resource('/admin/env_management/envitem', EnvitemManagementController::class);
         });
 
         Route::name('user-management.')->group(function () {
             Route::resource('/admin/user-management/users', UserManagementController::class);
-            // Route::post('/admin/user-management/users/create', [UserManagementController::class, 'create']);
             Route::resource('/admin/user-management/roles', RoleManagementController::class);
             Route::resource('/admin/user-management/permissions', PermissionManagementController::class);
             Route::resource('/admin/user-management/pools', PoolManagementController::class);
