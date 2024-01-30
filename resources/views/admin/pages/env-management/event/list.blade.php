@@ -237,7 +237,7 @@
             var table = $('#env_event_table').DataTable({
                 processing: true,
                 serverSide: true,
-                responsive: true,
+                responsive: true, 
                 ajax: "{{ route('admin.env-management.event.index') }}",
                 columns: [
                     {

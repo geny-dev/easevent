@@ -13,7 +13,7 @@ class Envsurrounding extends Model
         'name',
     ];
     public function get_events() {
-        $events = DB::table('envsurrounding')->select('id','name')->get();
+        $events = DB::table('events')->select('id','name')->get();
         return $events;
     }
 }

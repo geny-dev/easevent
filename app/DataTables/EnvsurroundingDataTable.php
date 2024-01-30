@@ -22,7 +22,9 @@ class EnvsurroundingDataTable extends DataTable
     public function dataTable(QueryBuilder $query): EloquentDataTable
     {
         return (new EloquentDataTable($query))
-            ->addColumn('action', 'envsurrounding.action')
+            ->addColumn('action', function(Envsurrounding $envsurrounding) {
+                return view('admin.pages.env-management.envsurrounding.columns._actions', compact('envsurrounding'));
+            })
             ->setRowId('id');
     }
 

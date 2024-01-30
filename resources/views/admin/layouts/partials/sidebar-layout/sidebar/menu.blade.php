@@ -180,8 +180,8 @@
                     </div>
                 </div>
                 <div class="menu-sub menu-sub-accordion menu-active-bg">
-                    <div class="menu-item {{ request()->routeIs('admin.env-management.surrounding.index') ? 'active' : '' }}">
-                        <a class="menu-link"  href="{{ route('admin.env-management.surrounding.index')}}">
+                    <div class="menu-item {{ request()->routeIs('admin.env-management.envsurrounding.index') ? 'active' : '' }}">
+                        <a class="menu-link"  href="{{ route('admin.env-management.envsurrounding.index')}}">
                             <span class="menu-bullet">
                                 <span class="bullet bullet-dot"></span>
                             </span>
@@ -189,6 +189,7 @@
                         </a>
                     </div>
                 </div>
+               
             </div>
         </div>
         <!--end::Menu-->
