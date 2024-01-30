@@ -25,6 +25,9 @@
 		<link href="{{ asset('assets/plugins/global/plugins.bundle.css')}}" rel="stylesheet" type="text/css" />
 		<link href="{{ asset('assets/css/style.bundle.css')}}" rel="stylesheet" type="text/css" />
 		<!--end::Global Stylesheets Bundle-->
+		<!-- begin:: custom style -->
+		<link href="{{ asset('assets/css/style.css')}}" rel="stylesheet" type="text/css" />
+		<!-- end:: custom style -->
         <!-- Stack for styles -->
         @stack('styles')
 	</head>
