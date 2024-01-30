@@ -13,7 +13,7 @@ class EventManagementController extends Controller
     public function index(EventDataTable $dataTable)
     {
         return $dataTable->render('admin.pages.env-management.event.list');
-    }
+    } 
     public function create(Request $request)
     {        
         $event = Event::create([
@@ -36,6 +36,7 @@ class EventManagementController extends Controller
                 'message' => 'Sorry! Record not found.',
             ], 404);
         }
+
 
         // Delete the user
         $event->delete();

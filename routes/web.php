@@ -5,6 +5,7 @@ use App\Http\Controllers\admin\PoolManagementController;
 use App\Http\Controllers\admin\RoleManagementController;
 use App\Http\Controllers\admin\UserManagementController;
 use App\Http\Controllers\admin\SurroundingManagementController;
+use App\Http\Controllers\admin\EnvsurroundingManagementController;
 use App\Http\Controllers\admin\EventManagementController;
 use App\Http\Controllers\admin\ItemManagementController;
 use App\Http\Controllers\admin\AudienceManagementController;
@@ -39,6 +40,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
         Route::name('env-management.')->group(function () {
             Route::resource('/admin/env-management/event', EventManagementController::class);
             Route::post('/admin/env-management/event/create', [EventManagementController::class, 'create']);
+            Route::resource('/admin/env_management/envsurrounding', EnvsurroundingManagementController::class);
+            Route::post('/admin/env-management/envsurrounding/create', [EnvsurroundingManagementController::class, 'create']);
         });
 
         Route::name('user-management.')->group(function () {

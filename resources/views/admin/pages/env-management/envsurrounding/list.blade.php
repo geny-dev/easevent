@@ -32,7 +32,7 @@
             <!--begin::Card toolbar-->
             <div class="card-toolbar">
                 <!--begin::Button-->
-                <button type="button" class="btn btn-light-primary" data-bs-toggle="modal" data-bs-target="#kt_modal_add_surrounding">
+                <button type="button" class="btn btn-light-primary" data-bs-toggle="modal" data-bs-target="#kt_modal_add_envsurrounding">
                     <!--begin::Svg Icon | path: icons/duotune/general/gen035.svg-->
                     <span class="svg-icon svg-icon-3">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -42,7 +42,7 @@
                         </svg>
                     </span>
                     <!--end::Svg Icon-->
-                    Add surrounding
+                    Add Event
                 </button>
                 <!--end::Button-->
             </div>
@@ -52,7 +52,7 @@
         <!--begin::Card body-->
         <div class="card-body pt-0">
             <!--begin::Table-->
-            <table class="table align-middle table-row-dashed fs-6 gy-5 mb-0" id="envsurrounding_table">
+            <table class="table align-middle table-row-dashed fs-6 gy-5 mb-0" id="env_envsurrounding_table">
                 <!--begin::Table head-->
                 <thead>
                     <!--begin::Table row-->
@@ -77,7 +77,7 @@
     <!--end::Card-->
     <!--begin::Modals-->
     <!--begin::Modal - Add permissions-->
-    <div class="modal fade" id="kt_modal_add_surrounding" tabindex="-1" aria-hidden="true">
+    <div class="modal fade" id="kt_modal_add_envsurrounding" tabindex="-1" aria-hidden="true">
         <!--begin::Modal dialog-->
         <div class="modal-dialog modal-dialog-centered mw-650px">
             <!--begin::Modal content-->
@@ -85,10 +85,10 @@
                 <!--begin::Modal header-->
                 <div class="modal-header">
                     <!--begin::Modal title-->
-                    <h2 class="fw-bolder">Add an surrounding</h2>
+                    <h2 class="fw-bolder">Add an Surrounding</h2>
                     <!--end::Modal title-->
                     <!--begin::Close-->
-                    <div class="btn btn-icon btn-sm btn-active-icon-primary" data-kt-surroundings-modal-action="close" data-bs-dismiss="modal">
+                    <div class="btn btn-icon btn-sm btn-active-icon-primary" data-kt-envsurroundings-modal-action="close" data-bs-dismiss="modal">
                         <!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
                         <span class="svg-icon svg-icon-1">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -104,24 +104,24 @@
                 <!--begin::Modal body-->
                 <div class="modal-body scroll-y mx-5 mx-xl-15 my-7">
                     <!--begin::Form-->
-                    <form id="kt_modal_add_surrounding_form" class="form" action="{{route('admin.env-management.surrounding.create')}}">
+                    <form id="kt_modal_add_envsurrounding_form" class="form" action="{{route('admin.env-management.envsurrounding.create')}}">
                         <!--begin::Input group-->
                         <div class="fv-row mb-7">
                             <!--begin::Label-->
                             <label class="fs-6 fw-bold form-label mb-2">
-                                <span class="required">surrounding Name</span>
+                                <span class="required">Event Name</span>
                                 <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-html="true" data-bs-content="Permission names is required to be unique."></i>
                             </label>
                             <!--end::Label-->
                             <!--begin::Input-->
-                            <input class="form-control form-control-solid" placeholder="Enter a surrounding name" name="surrounding_name" />
+                            <input class="form-control form-control-solid" placeholder="Enter a surrounding name" name="envsurrounding_name" />
                             <!--end::Input-->
                         </div>
                         <!--end::Input group-->
                         <!--begin::Actions-->
                         <div class="text-center pt-15" data-bs-dismiss="modal">
-                            <button type="reset" class="btn btn-light me-3" data-kt-surroundings-modal-action="cancel">Discard</button>
-                            <button type="submit" class="btn btn-primary" data-kt-surroundings-modal-action="submit">
+                            <button type="reset" class="btn btn-light me-3" data-kt-envsurroundings-modal-action="cancel">Discard</button>
+                            <button type="submit" class="btn btn-primary" data-kt-envsurroundings-modal-action="submit">
                                 <span class="indicator-label">Submit</span>
                                 <span class="indicator-progress">Please wait...
                                 <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
@@ -147,10 +147,10 @@
                 <!--begin::Modal header-->
                 <div class="modal-header">
                     <!--begin::Modal title-->
-                    <h2 class="fw-bolder">Update surrounding</h2>
+                    <h2 class="fw-bolder">Update Event</h2>
                     <!--end::Modal title-->
                     <!--begin::Close-->
-                    <div class="btn btn-icon btn-sm btn-active-icon-primary" data-kt-surroundings-modal-action="close">
+                    <div class="btn btn-icon btn-sm btn-active-icon-primary" data-kt-envsurroundings-modal-action="close">
                         <!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
                         <span class="svg-icon svg-icon-1">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -193,12 +193,12 @@
                     <!--end::Notice-->
                     <!--end::Notice-->
                     <!--begin::Form-->
-                    <form id="kt_modal_update_surrounding_form" class="form" action="#">
+                    <form id="kt_modal_update_envsurrounding_form" class="form" action="#">
                         <!--begin::Input group-->
                         <div class="fv-row mb-7">
                             <!--begin::Label-->
                             <label class="fs-6 fw-bold form-label mb-2">
-                                <span class="required">surrounding Name</span>
+                                <span class="required">Surrounding Name</span>
                                 <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-html="true" data-bs-content="Item names is required to be unique."></i>
                             </label>
                             <!--end::Label-->
@@ -209,8 +209,8 @@
                         <!--end::Input group-->
                         <!--begin::Actions-->
                         <div class="text-center pt-15">
-                            <button type="reset" class="btn btn-light me-3" data-kt-surroundings-modal-action="cancel">Discard</button>
-                            <button type="submit" class="btn btn-primary" data-kt-surroundings-modal-action="submit">
+                            <button type="reset" class="btn btn-light me-3" data-kt-envsurroundings-modal-action="cancel">Discard</button>
+                            <button type="submit" class="btn btn-primary" data-kt-envsurroundings-modal-action="submit">
                                 <span class="indicator-label">Submit</span>
                                 <span class="indicator-progress">Please wait...
                                 <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
@@ -234,11 +234,11 @@
         <script type="text/javascript">
         $('document').ready(function() {
            // datatable
-            var table = $('#envsurrounding_table').DataTable({
+            var table = $('#env_envsurrounding_table').DataTable({
                 processing: true,
                 serverSide: true,
-                responsive: true,
-                ajax: "{{ route('admin.env-management.surrounding.index') }}",
+                responsive: true, 
+                ajax: "{{ route('admin.env-management.envsurrounding.index') }}",
                 columns: [
                     {
                         data: 'id',
