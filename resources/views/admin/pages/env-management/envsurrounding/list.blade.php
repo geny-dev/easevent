@@ -42,7 +42,7 @@
                         </svg>
                     </span>
                     <!--end::Svg Icon-->
-                    Add Event
+                    Add Surrounding
                 </button>
                 <!--end::Button-->
             </div>
@@ -109,7 +109,7 @@
                         <div class="fv-row mb-7">
                             <!--begin::Label-->
                             <label class="fs-6 fw-bold form-label mb-2">
-                                <span class="required">Event Name</span>
+                                <span class="required">Surrounding Name</span>
                                 <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-html="true" data-bs-content="Permission names is required to be unique."></i>
                             </label>
                             <!--end::Label-->
@@ -147,7 +147,7 @@
                 <!--begin::Modal header-->
                 <div class="modal-header">
                     <!--begin::Modal title-->
-                    <h2 class="fw-bolder">Update Event</h2>
+                    <h2 class="fw-bolder">Update Surrounding</h2>
                     <!--end::Modal title-->
                     <!--begin::Close-->
                     <div class="btn btn-icon btn-sm btn-active-icon-primary" data-kt-envsurroundings-modal-action="close">
